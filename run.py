@@ -1,5 +1,6 @@
 # Essential Imports
 import time
+import os
 
 def introduction_message():
     """
@@ -16,10 +17,25 @@ def introduction_message():
         if not (user_name).isalpha() or (user_name == ''):
             print('Invalid name, please try again.\n')
         else:
+            clear_terminal()
             print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
-            print("as your destination generation will depend heavily on this.")
+            print("as your destination generation will depend heavily on this.\n \n")
             break
 
+def clear_terminal():
+    """
+    Function to clear the terminal after some inputs
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def questions():
+    """
+    Function to display questions and input to the user
+    """
+    input("Picture your dream getaway in your head for a moment..\n \n"
+          "Now first things first, do you want a relaxing holiday?\n \n"
+          "Please answer with Yes or No: ")
+    
 
 def main():
     """
@@ -27,5 +43,6 @@ def main():
     """
 
     introduction_message()
+    questions()
 
 main()
