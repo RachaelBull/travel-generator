@@ -51,13 +51,13 @@ def main():
             print("Great choice! Now for the next preference...\n \n")
             break
             CARRIBEAN = True
-            
         elif user_selection_one == 'N':
             clear_terminal()
             print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
             break
             CANADA = True
         else:
+            clear_terminal()
             print('Invalid input, please try again.\n')
 
     # Question No.2
@@ -77,6 +77,7 @@ def main():
             CANADA = True
             break
         else:
+            clear_terminal()
             print('Invalid input, please try again.\n')
 
     # Question No.3
@@ -89,14 +90,81 @@ def main():
             clear_terminal()
             print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
             "And for the next preference...")
-            break
             CARRIBEAN = True
             MEXICO_USA = True
+            break
         elif user_selection_three == 'N':
             clear_terminal()
             print("Trying new things is risky, why not stick with what you know?! Let's move on...")
-            break
             CANADA = True
+            break
+        else:
+            clear_terminal()
+            print('Invalid input, please try again.\n')
+
+    # Question No.4
+
+    while True:
+        user_selection_four = input("Your days should have started to mould inside your imagination by now,"
+        "but if not that's fine, we're not quite finished yet!\n \n"
+        "Would you say that you are an adventurous individual that loves to explore?\n \n"
+        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        if user_selection_four == 'Y':
+            clear_terminal()
+            print("What better way to see the most of the destination! Just a few more questions...")
+            CANADA = True
+            MEXICO_USA = True
+            break
+        elif user_selection_four == 'N':
+            clear_terminal()
+            print("Holidays are for relaxing right? Relaxing is just the way to do it. Just a few more questions...")
+            CARRIBEAN = True
+            break
+        else:
+            clear_terminal()
+            print('Invalid input, please try again.\n')
+
+    # Question No.5
+    while True:
+        user_selection_five = input("We're almost reaching the end! Now we need to think about that hole in the pocket that"
+        "wallet will burn if not careful..\n \n"
+        "Do you wish to go somewhere on the cheaper range of the currency exchange rate?\n \n"
+        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        if user_selection_five == 'Y':
+            clear_terminal()
+            print("The cheaper the holiday the higher the class we fly, right?! And for the final question...")
+            CANADA = True
+            break
+        elif user_selection_five == 'N':
+            clear_terminal()
+            print("Holidays aren't often enough, why not splash out?! And for the final question...")
+            MEXICO_USA = True
+            break
+        else:
+            clear_terminal()
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+
+    # Question No.6
+    while True:
+        user_selection_six = input("The final question... It's no secret that everyone has varied opinions when it"
+        "comes to children when on holday.\n \n"
+        "Would you like your destination to be a childrens destination aswell as an adults?\n \n"
+        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        if user_selection_six == 'Y':
+            clear_terminal()
+            print("The more the merrier! Who doesn't love sharing unforgettable moments with our little ones?")
+            MEXICO_USA = True
+            break
+        elif user_selection_six == 'N':
+            clear_terminal()
+            print("Everyone needs a break sometimes! They can come next time.. right?")
+            CARRIBEAN = True
+            break
+        else:
+            clear_terminal()
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+
+            
 
 
 main()
