@@ -10,9 +10,22 @@ def introduction_message():
     print("After all questions have been answered you will then be displayed with a destination recommendation tailored to your preferences.\n")
     print("An optional prices average for the month of travel can also be displayed after this conclusion.")
 
-    user_name = input("Please enter your name here: ")
-    print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
-    print("as your destination generation will depend heavily on this.")
-    
+    # Username validation to only allow letters
+    while True:
+        user_name = input("Please enter your name here: \n")
+        if not (user_name).isalpha() or (user_name == ''):
+            print('Invalid name, please try again.\n')
+        else:
+            print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
+            print("as your destination generation will depend heavily on this.")
+            break
 
-introduction_message()
+
+def main():
+    """
+    To call all functions in one main area, in an orderly form
+    """
+
+    introduction_message()
+
+main()
