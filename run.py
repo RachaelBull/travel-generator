@@ -11,5 +11,8 @@ def introduction_message():
     print("An optional prices average for the month of travel can also be displayed after this conclusion.")
 
     user_name = input("Please enter your name here: ")
+    print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
+    print("as your destination generation will depend heavily on this.")
+    
 
 introduction_message()
