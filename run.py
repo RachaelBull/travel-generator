@@ -40,6 +40,8 @@ def main():
                 break
     introduction_message()
 
+    # Question No.1
+
     while True:
         user_selection_one = input("Picture your dream getaway in your head for a moment..\n \n"
           "Now first things first, do you want a relaxing holiday?\n \n"
@@ -58,6 +60,8 @@ def main():
         else:
             print('Invalid input, please try again.\n')
 
+    # Question No.2
+
     while True:
         user_selection_two = input("Now picture some local walking distance feautures...\n \n"
         "Is a nearby beach within walking distance important to you?\n \n"
@@ -74,5 +78,25 @@ def main():
             break
         else:
             print('Invalid input, please try again.\n')
+
+    # Question No.3
+
+    while True:
+        user_selection_three = input("Now take a few seconds to think of the amazing meals you'll experience there...\n \n"
+        "Is it important to you to indulge in local, traditional dishes of the culture?\n \n"
+        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        if user_selection_three == 'Y':
+            clear_terminal()
+            print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
+            "And for the next preference...")
+            break
+            CARRIBEAN = True
+            MEXICO_USA = True
+        elif user_selection_three == 'N':
+            clear_terminal()
+            print("Trying new things is risky, why not stick with what you know?! Let's move on...")
+            break
+            CANADA = True
+
 
 main()
