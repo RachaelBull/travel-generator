@@ -1,3 +1,15 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# Essential Imports
+import time
+
+def introduction_message():
+    """
+    Displays an introduction message to the user to indicate what this application is for
+    """
+    print("Welcome to this destination suggestions application.\n")
+    print("You will be asked multiple general questions about your destination preferences which you will answer yes or no.\n")
+    print("After all questions have been answered you will then be displayed with a destination recommendation tailored to your preferences.\n")
+    print("An optional prices average for the month of travel can also be displayed after this conclusion.")
+
+    user_name = input("Please enter your name here: ")
+
+introduction_message()
