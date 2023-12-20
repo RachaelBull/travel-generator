@@ -13,6 +13,12 @@ def main():
     Main function containing the questions and mostly used variables
     """
 
+    # Choices options and tally
+    CARRIBEAN = False
+    CANADA = False
+    MEXICO_USA= False
+
+
     def introduction_message():
         """
         Displays an introduction message to the user to indicate what this application is for
@@ -35,16 +41,36 @@ def main():
     introduction_message()
 
     while True:
-        user_selection = input("Picture your dream getaway in your head for a moment..\n \n"
+        user_selection_one = input("Picture your dream getaway in your head for a moment..\n \n"
           "Now first things first, do you want a relaxing holiday?\n \n"
           "Please answer with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection == 'Y':
+        if user_selection_one == 'Y':
             clear_terminal()
             print("Great choice! Now for the next preference...\n \n")
             break
-        elif user_selection == 'N':
+            CARRIBEAN = True
+            
+        elif user_selection_one == 'N':
             clear_terminal()
             print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
+            break
+            CANADA = True
+        else:
+            print('Invalid input, please try again.\n')
+
+    while True:
+        user_selection_two = input("Now picture some local walking distance feautures...\n \n"
+        "Is a nearby beach within walking distance important to you?\n \n"
+        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        if user_selection_two == 'Y':
+            clear_terminal()
+            print("Who doesn't love a beach? Good choice! On to the next question...")
+            CARRIBEAN = True
+            break
+        elif user_selection_two == 'N':
+            clear_terminal()
+            print("More of get up and explore kind of person, I like it! On to the next question...")
+            CANADA = True
             break
         else:
             print('Invalid input, please try again.\n')
