@@ -8,39 +8,47 @@ def clear_terminal():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
-#Destinations list
+# Destinations list
 
 carribean_destinations = ['St.Lucia', 'Barbados', 'Antigua', 'Bahamas']
 usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
 canada_destinations = ['Vancouver', 'Calgary']
 
-def main():
+
+def introduction_message():
     """
-    Main function containing the questions and mostly used variables
+    Displays an introduction message to the user to indicate what this application is for
     """
+    print("Welcome to this destination suggestions application.\n")
+    print("You will be asked multiple general questions about your destination preferences which you will answer yes or no.\n")
+    print("After all questions have been answered you will then be displayed with a destination recommendation tailored to your preferences.\n")
+    print("An optional prices average for the month of travel can also be displayed after this conclusion.")
 
-    def introduction_message():
-        """
-        Displays an introduction message to the user to indicate what this application is for
-        """
-        print("Welcome to this destination suggestions application.\n")
-        print("You will be asked multiple general questions about your destination preferences which you will answer yes or no.\n")
-        print("After all questions have been answered you will then be displayed with a destination recommendation tailored to your preferences.\n")
-        print("An optional prices average for the month of travel can also be displayed after this conclusion.")
+    # Username validation to only allow letters
+    while True:
+        user_name = input("Please enter your name here: \n")
+        if not (user_name).isalpha() or (user_name == ''):
+            print('Invalid name, please try again.\n')
+        else:
+            clear_terminal()
+            print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
+            print("as your destination generation will depend heavily on this.\n \n")
+            break
 
-        # Username validation to only allow letters
-        while True:
-            user_name = input("Please enter your name here: \n")
-            if not (user_name).isalpha() or (user_name == ''):
-                print('Invalid name, please try again.\n')
-            else:
-                clear_terminal()
-                print(f"Hello {user_name}, please take time to think about your preferences to the questions,")
-                print("as your destination generation will depend heavily on this.\n \n")
-                break
-    introduction_message()
 
-    # Question No.1
+def user_questions():
+    """
+    Displays the questions and answer options to the user
+    """
+    # To keep a tally of destinations depending on the users selected answer
+    carribean
+    carribean = 0
+    usa_mexico
+    usa_mexico = 0
+    canada
+    canada = 0
+
+    # Question No,1
 
     while True:
         user_selection_one = input("Picture your dream getaway in your head for a moment..\n \n"
@@ -48,10 +56,13 @@ def main():
           "Please answer with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_one == 'Y':
             clear_terminal()
+            carribean += 1 #Increment destination tally
+            usa_mexico += 1
             print("Great choice! Now for the next preference...\n \n")
             break
         elif user_selection_one == 'N':
             clear_terminal()
+            canada += 1 #Increment destination tally
             print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
             break
         else:
@@ -66,10 +77,12 @@ def main():
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_two == 'Y':
             clear_terminal()
+            carribean += 1
             print("Who doesn't love a beach? Good choice! On to the next question...")
             break
         elif user_selection_two == 'N':
             clear_terminal()
+            usa_mexico += 1
             print("More of get up and explore kind of person, I like it! On to the next question...")
             break
         else:
@@ -84,11 +97,14 @@ def main():
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_three == 'Y':
             clear_terminal()
+            carribean += 1
+            usa_mexico += 1
             print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
             "And for the next preference...")
             break
         elif user_selection_three == 'N':
             clear_terminal()
+            canada += 1
             print("Trying new things is risky, why not stick with what you know?! Let's move on...")
             break
         else:
@@ -104,10 +120,12 @@ def main():
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_four == 'Y':
             clear_terminal()
+            canada += 1
             print("What better way to see the most of the destination! Just a few more questions...")
             break
         elif user_selection_four == 'N':
             clear_terminal()
+            carribean += 1
             print("Holidays are for relaxing right? Relaxing is just the way to do it. Just a few more questions...")
             break
         else:
@@ -122,10 +140,12 @@ def main():
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_five == 'Y':
             clear_terminal()
+            canada += 1
             print("The cheaper the holiday the higher the class we fly, right?! And for the final question...")
             break
         elif user_selection_five == 'N':
             clear_terminal()
+            usa_mexico += 1
             print("Holidays aren't often enough, why not splash out?! And for the final question...")
             break
         else:
@@ -140,17 +160,51 @@ def main():
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
         if user_selection_six == 'Y':
             clear_terminal()
+            usa_mexico += 1
             print("The more the merrier! Who doesn't love sharing unforgettable moments with our little ones?")
             break
         elif user_selection_six == 'N':
             clear_terminal()
+            carribean += 1
             print("Everyone needs a break sometimes! They can come next time.. right?")
             break
         else:
             clear_terminal()
             print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
 
-            
+def destination_conclusion():
+    """
+    Function to determine which destination would be best for the user
+    """
 
+    while True:
+        if carribean > usa_mexico:
+            print("Carribean for you!")
+        elif carribean < usa_mexico:
+            print("USA/Mexico for you!")
+        elif carribean > canada:
+            print("Carribean for you!")
+        elif carribean < canada:
+            print("Canada for you!")
+        elif canada > usa_mexico:
+            print("Canada for you!")
+        elif canada < usa_mexico:
+            print("USA/Mexico for you!")
+        elif carribean == usa_mexico:
+            print("Carribean or USA/Mexico for you!")
+        elif carribean == canada:
+            print("Carribean or Canada for you!")
+        elif usa_mexico == canada:
+            print("USA/Mexico or Canada for you!")
+
+
+def main():
+    """
+    Function to call other functions in order
+    """
+
+    introduction_message()
+    user_questions()
+    destination_conclusion()
 
 main()
