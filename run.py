@@ -8,16 +8,16 @@ def clear_terminal():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
+#Destinations list
+
+carribean_destinations = ['St.Lucia', 'Barbados', 'Antigua', 'Bahamas']
+usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
+canada_destinations = ['Vancouver', 'Calgary']
+
 def main():
     """
     Main function containing the questions and mostly used variables
     """
-
-    # Choices options and tally
-    CARRIBEAN = False
-    CANADA = False
-    MEXICO_USA= False
-
 
     def introduction_message():
         """
@@ -50,12 +50,10 @@ def main():
             clear_terminal()
             print("Great choice! Now for the next preference...\n \n")
             break
-            CARRIBEAN = True
         elif user_selection_one == 'N':
             clear_terminal()
             print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
             break
-            CANADA = True
         else:
             clear_terminal()
             print('Invalid input, please try again.\n')
@@ -69,12 +67,10 @@ def main():
         if user_selection_two == 'Y':
             clear_terminal()
             print("Who doesn't love a beach? Good choice! On to the next question...")
-            CARRIBEAN = True
             break
         elif user_selection_two == 'N':
             clear_terminal()
             print("More of get up and explore kind of person, I like it! On to the next question...")
-            CANADA = True
             break
         else:
             clear_terminal()
@@ -90,13 +86,10 @@ def main():
             clear_terminal()
             print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
             "And for the next preference...")
-            CARRIBEAN = True
-            MEXICO_USA = True
             break
         elif user_selection_three == 'N':
             clear_terminal()
             print("Trying new things is risky, why not stick with what you know?! Let's move on...")
-            CANADA = True
             break
         else:
             clear_terminal()
@@ -112,13 +105,10 @@ def main():
         if user_selection_four == 'Y':
             clear_terminal()
             print("What better way to see the most of the destination! Just a few more questions...")
-            CANADA = True
-            MEXICO_USA = True
             break
         elif user_selection_four == 'N':
             clear_terminal()
             print("Holidays are for relaxing right? Relaxing is just the way to do it. Just a few more questions...")
-            CARRIBEAN = True
             break
         else:
             clear_terminal()
@@ -133,12 +123,10 @@ def main():
         if user_selection_five == 'Y':
             clear_terminal()
             print("The cheaper the holiday the higher the class we fly, right?! And for the final question...")
-            CANADA = True
             break
         elif user_selection_five == 'N':
             clear_terminal()
             print("Holidays aren't often enough, why not splash out?! And for the final question...")
-            MEXICO_USA = True
             break
         else:
             clear_terminal()
@@ -153,12 +141,10 @@ def main():
         if user_selection_six == 'Y':
             clear_terminal()
             print("The more the merrier! Who doesn't love sharing unforgettable moments with our little ones?")
-            MEXICO_USA = True
             break
         elif user_selection_six == 'N':
             clear_terminal()
             print("Everyone needs a break sometimes! They can come next time.. right?")
-            CARRIBEAN = True
             break
         else:
             clear_terminal()
