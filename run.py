@@ -199,10 +199,14 @@ def destination_conclusion(carribean, usa_mexico, canada):
             "amazing food.. what's more could you want?")
             break
         elif carribean < usa_mexico:
-            print("USA/Mexico for you!")
+            print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
+            f"{usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
+            "time of year, a home away from home.. right?")
             break
         elif carribean > canada:
-            print("Carribean for you!")
+            print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
+            f"{carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
+            "amazing food.. what's more could you want?")
             break
         elif carribean < canada:
             print("Canada for you!")
@@ -211,7 +215,9 @@ def destination_conclusion(carribean, usa_mexico, canada):
             print("Canada for you!")
             break
         elif canada < usa_mexico:
-            print("USA/Mexico for you!")
+            print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
+            f"{usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
+            "time of year, a home away from home.. right?")
             break
         elif carribean == usa_mexico:
             print("Carribean or USA/Mexico for you!")
