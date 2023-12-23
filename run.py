@@ -18,6 +18,7 @@ def introduction_message():
     """
     Displays an introduction message to the user to indicate what this application is for
     """
+    clear_terminal()
     print("Welcome to this destination suggestions application.\n")
     print("You will be asked multiple general questions about your destination preferences which you will answer yes or no.\n")
     print("After all questions have been answered you will then be displayed with a destination recommendation tailored to your preferences.\n")
@@ -217,6 +218,7 @@ def request_start_again():
         if user_restart == "Y":
             main()
         elif user_restart == "N":
+            clear_terminal()
             print("Perfect destination, right?! Thankyou for using this travel destination generator.")
         else:
             print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
