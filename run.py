@@ -50,19 +50,20 @@ def user_questions():
     # Question No,1
 
     while True:
-        user_selection_one = input("Picture your dream getaway in your head for a moment..\n \n"
-          "Now first things first, do you want a relaxing holiday?\n \n"
-          "Please answer with 'Y' for yes or 'N' for no: ")
-        if user_selection_one.lower() == 'y':
+        user_choice_one = input("Picture your dream getaway for a moment..\n"
+                                "Now first thing, do you want to relax?\n \n"
+                                "Please answer with Y/N: ")
+        if user_choice_one.lower() == 'y':
             clear_terminal()
-            carribean += 1 #Increment destination tally
+            carribean += 1  # Increment destination tally
             usa_mexico += 1
             print("Great choice! Now for the next preference...\n \n")
             break
-        elif user_selection_one.lower() == 'n':
+        elif user_choice_one.lower() == 'n':
             clear_terminal()
-            canada += 1 #Increment destination tally
-            print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
+            canada += 1  # Increment destination tally
+            print("Not a problem, that preference isn't for everyone! "
+                  "Now for the next preference... \n \n")
             break
         else:
             clear_terminal()
@@ -71,18 +72,20 @@ def user_questions():
     # Question No.2
 
     while True:
-        user_selection_two = input("Now picture some local walking distance feautures...\n \n"
-        "Is a nearby beach within walking distance important to you?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no: ")
+        user_selection_two = input("Now picture some local feautures...\n \n"
+                                   "Is a nearby beach within walking distance "
+                                   "important to you?\n \n"
+                                   "Please answer this with Y/N: ")
         if user_selection_two.lower() == 'y':
             clear_terminal()
             carribean += 1
-            print("Who doesn't love a beach? Good choice! On to the next question...")
+            print("Who doesn't love a beach? On to the next question...")
             break
         elif user_selection_two.lower() == 'n':
             clear_terminal()
             usa_mexico += 1
-            print("More of get up and explore kind of person, I like it! On to the next question...")
+            print("More of get up and explore kind of person, I like it! "
+                  "On to the next question...")
             break
         else:
             clear_terminal()
@@ -91,20 +94,26 @@ def user_questions():
     # Question No.3
 
     while True:
-        user_selection_three = input("Now take a few seconds to think of the amazing meals you'll experience there...\n \n"
-        "Is it important to you to indulge in local, traditional dishes of the culture?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no: ")
+        user_selection_three = input("Now take a few seconds to think of the "
+                                     "amazing meals you'll experience there..."
+                                     "\n \n"
+                                     "Is it important to you to indulge in "
+                                     "local, traditional and cultural dishes?"
+                                     "\n \n"
+                                     "Please answer this with Y/N: ")
         if user_selection_three.lower() == 'y':
             clear_terminal()
             carribean += 1
             usa_mexico += 1
-            print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
-            "And for the next preference...")
+            print("Open to trying new things, an amazing way to get the "
+                  "locals experience, amazing choice!"
+                  "And for the next preference...")
             break
         elif user_selection_three.lower() == 'n':
             clear_terminal()
             canada += 1
-            print("Trying new things is risky, why not stick with what you know?! Let's move on...")
+            print("Trying new things is risky, why not stick with what you "
+                  "know?! Let's move on...")
             break
         else:
             clear_terminal()
@@ -113,19 +122,23 @@ def user_questions():
     # Question No.4
 
     while True:
-        user_selection_four = input("Your days should have started to mould inside your imagination by now,"
-        "but if not that's fine, we're not quite finished yet!\n \n"
-        "Would you say that you are an adventurous individual that loves to explore?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        user_selection_four = input("Your days should have started to mould "
+                                    "inside your imagination by now, "
+                                    "if not, we're not quite finished yet!\n"
+                                    "Would you say that you are an adventurous"
+                                    " individual that loves to explore?\n \n"
+                                    "Please answer this with Y/N: ")
         if user_selection_four.lower() == 'y':
             clear_terminal()
             canada += 1
-            print("What better way to see the most of the destination! Just a few more questions...")
+            print("What better way to see the most of the destination! "
+                  "Just a few more questions...")
             break
         elif user_selection_four.lower() == 'n':
             clear_terminal()
             carribean += 1
-            print("Holidays are for relaxing right? Relaxing is just the way to do it. Just a few more questions...")
+            print("Holidays are for relaxing right? Relaxing is just the way "
+                  "to do it. Just a few more questions...")
             break
         else:
             clear_terminal()
@@ -133,47 +146,58 @@ def user_questions():
 
     # Question No.5
     while True:
-        user_selection_five = input("We're almost reaching the end! Now we need to think about that hole in the pocket that"
-        "wallet will burn if not careful..\n \n"
-        "Do you wish to go somewhere on the cheaper range of the currency exchange rate?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        user_selection_five = input("We're almost reaching the end! Now we "
+                                    "need to think about the hole that wallet"
+                                    " will burn if not careful..\n \n"
+                                    "Do you wish to go somewhere on the "
+                                    "cheaper range of the currency exchange "
+                                    "rate?\n \n"
+                                    "Please answer this with Y/N: ")
         if user_selection_five.lower() == 'y':
             clear_terminal()
             canada += 1
-            print("The cheaper the holiday the higher the class we fly, right?! And for the final question...")
+            print("The cheaper the holiday the higher the class we fly, right?"
+                  "And for the final question...")
             break
         elif user_selection_five.lower() == 'n':
             clear_terminal()
             usa_mexico += 1
-            print("Holidays aren't often enough, why not splash out?! And for the final question...")
+            print("Holidays aren't often enough, why not splash out?! "
+                  "And for the final question...")
             break
         else:
             clear_terminal()
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+            print("Please answer this with Y/N: ")
 
     # Question No.6
     while True:
-        user_selection_six = input("The final question... It's no secret that everyone has varied opinions when it"
-        "comes to children when on holday.\n \n"
-        "Would you like your destination to be a childrens destination aswell as an adults?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+        user_selection_six = input("The final question... It's no secret that "
+                                   "everyone has varied opinions when it"
+                                   "comes to children when on holday.\n \n"
+                                   "Would you like your destination to be a "
+                                   "childrens destination aswell as an adults?"
+                                   "\n \n"
+                                   "Please answer this with Y/N: ")
         if user_selection_six.lower() == 'y':
             clear_terminal()
             usa_mexico += 1
-            print("The more the merrier! Who doesn't love sharing unforgettable moments with our little ones?")
+            print("The more the merrier! Who doesn't love sharing amazing "
+                  "moments with our little ones?")
             break
         elif user_selection_six.lower() == 'n':
             clear_terminal()
             carribean += 1
-            print("Everyone needs a break sometimes! They can come next time.. right?")
+            print("Everyone needs a break sometimes! They can come next "
+                  "time.. right?")
             break
         else:
             clear_terminal()
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")  
+            print("Please answer this with Y/N: ")
 
     while True:
         destination_conclusion(carribean, usa_mexico, canada)
         break
+    
 
 def destination_conclusion(carribean, usa_mexico, canada):
     """
