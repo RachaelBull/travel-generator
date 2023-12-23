@@ -167,39 +167,42 @@ def user_questions():
             clear_terminal()
             print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
 
-def destination_conclusion():
+        while True:
+        if carribean > usa_mexico:
+            print("Carribean for you!")
+            break
+        elif carribean < usa_mexico:
+            print("USA/Mexico for you!")
+            break
+        elif carribean > canada:
+            print("Carribean for you!")
+            break
+        elif carribean < canada:
+            print("Canada for you!")
+            break
+        elif canada > usa_mexico:
+            print("Canada for you!")
+            break
+        elif canada < usa_mexico:
+            print("USA/Mexico for you!")
+            break
+        elif carribean == usa_mexico:
+            print("Carribean or USA/Mexico for you!")
+            break
+        elif carribean == canada:
+            print("Carribean or Canada for you!")
+            break
+        elif usa_mexico == canada:
+            print("USA/Mexico or Canada for you!")
+            break
+    
+
+def destination_conclusion(carribean, usa_mexico, canada):
     """
     Function to determine which destination would be best for the user
     """
 
-    while True:
-    if carribean > usa_mexico:
-        print("Carribean for you!")
-        break
-    elif carribean < usa_mexico:
-        print("USA/Mexico for you!")
-        break
-    elif carribean > canada:
-        print("Carribean for you!")
-        break
-    elif carribean < canada:
-        print("Canada for you!")
-        break
-    elif canada > usa_mexico:
-        print("Canada for you!")
-        break
-    elif canada < usa_mexico:
-        print("USA/Mexico for you!")
-        break
-    elif carribean == usa_mexico:
-        print("Carribean or USA/Mexico for you!")
-        break
-    elif carribean == canada:
-        print("Carribean or Canada for you!")
-        break
-    elif usa_mexico == canada:
-        print("USA/Mexico or Canada for you!")
-        break
+    
 
 def main():
     """
@@ -208,6 +211,5 @@ def main():
 
     introduction_message()
     user_questions()
-    destination_conclusion()
 
 main()
