@@ -14,7 +14,6 @@ carribean_destinations = ['St.Lucia', 'Barbados', 'Antigua', 'Bahamas']
 usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
 canada_destinations = ['Vancouver', 'Calgary']
 
-
 def introduction_message():
     """
     Displays an introduction message to the user to indicate what this application is for
@@ -41,13 +40,9 @@ def user_questions():
     Displays the questions and answer options to the user
     """
     # To keep a tally of destinations depending on the users selected answer
-    carribean
     carribean = 0
-    usa_mexico
     usa_mexico = 0
-    canada
     canada = 0
-
     # Question No,1
 
     while True:
@@ -178,25 +173,33 @@ def destination_conclusion():
     """
 
     while True:
-        if carribean > usa_mexico:
-            print("Carribean for you!")
-        elif carribean < usa_mexico:
-            print("USA/Mexico for you!")
-        elif carribean > canada:
-            print("Carribean for you!")
-        elif carribean < canada:
-            print("Canada for you!")
-        elif canada > usa_mexico:
-            print("Canada for you!")
-        elif canada < usa_mexico:
-            print("USA/Mexico for you!")
-        elif carribean == usa_mexico:
-            print("Carribean or USA/Mexico for you!")
-        elif carribean == canada:
-            print("Carribean or Canada for you!")
-        elif usa_mexico == canada:
-            print("USA/Mexico or Canada for you!")
-
+    if carribean > usa_mexico:
+        print("Carribean for you!")
+        break
+    elif carribean < usa_mexico:
+        print("USA/Mexico for you!")
+        break
+    elif carribean > canada:
+        print("Carribean for you!")
+        break
+    elif carribean < canada:
+        print("Canada for you!")
+        break
+    elif canada > usa_mexico:
+        print("Canada for you!")
+        break
+    elif canada < usa_mexico:
+        print("USA/Mexico for you!")
+        break
+    elif carribean == usa_mexico:
+        print("Carribean or USA/Mexico for you!")
+        break
+    elif carribean == canada:
+        print("Carribean or Canada for you!")
+        break
+    elif usa_mexico == canada:
+        print("USA/Mexico or Canada for you!")
+        break
 
 def main():
     """
