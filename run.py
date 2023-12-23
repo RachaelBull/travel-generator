@@ -184,12 +184,19 @@ def destination_conclusion(carribean, usa_mexico, canada):
     usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
     canada_destinations = ['Vancouver', 'Calgary']
 
+    # Variables for random list item selection
+
     carribean_selection = random.choice(carribean_destinations)
+    usa_mexico_selection = random.choice(usa_mexico_destinations)
+    
+
 
     clear_terminal()
     while True:
         if carribean > usa_mexico:
-            print(f"Carribean for you! I personally recommend {carribean_selection}")
+            print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
+            f"{carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
+            "amazing food.. what's more could you want?")
             break
         elif carribean < usa_mexico:
             print("USA/Mexico for you!")
