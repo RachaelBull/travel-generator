@@ -175,6 +175,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
     """
     Function to determine which destination would be best for the user
     """
+    clear_terminal()
     while True:
         if carribean > usa_mexico:
             print("Carribean for you!")
@@ -203,6 +204,13 @@ def destination_conclusion(carribean, usa_mexico, canada):
         elif usa_mexico == canada:
             print("USA/Mexico or Canada for you!")
             break
+    request_start_again()
+
+def request_start_again():
+    """
+    Function to ask the user whether they would like to try and questions again for a different output
+    """
+    print("hello")
 
 def main():
     """
