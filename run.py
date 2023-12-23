@@ -9,12 +9,6 @@ def clear_terminal():
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# Destinations list
-
-carribean_destinations = ['St.Lucia', 'Barbados', 'Antigua', 'Bahamas']
-usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
-canada_destinations = ['Vancouver', 'Calgary']
-
 def introduction_message():
     """
     Displays an introduction message to the user to indicate what this application is for
@@ -27,7 +21,7 @@ def introduction_message():
 
     # Username validation to only allow letters
     while True:
-        user_name = input("Please enter your name here: \n")
+        user_name = input("\nPlease enter your name here: \n")
         if not (user_name).isalpha() or (user_name == ''):
             print('Invalid name, please try again.\n')
         else:
@@ -50,14 +44,14 @@ def user_questions():
     while True:
         user_selection_one = input("Picture your dream getaway in your head for a moment..\n \n"
           "Now first things first, do you want a relaxing holiday?\n \n"
-          "Please answer with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_one == 'Y':
+          "Please answer with 'Y' for yes or 'N' for no: ")
+        if user_selection_one.lower() == 'y':
             clear_terminal()
             carribean += 1 #Increment destination tally
             usa_mexico += 1
             print("Great choice! Now for the next preference...\n \n")
             break
-        elif user_selection_one == 'N':
+        elif user_selection_one.lower() == 'n':
             clear_terminal()
             canada += 1 #Increment destination tally
             print("Not a problem, that preference isn't for everyone! Now for the next preference... \n \n")
@@ -71,13 +65,13 @@ def user_questions():
     while True:
         user_selection_two = input("Now picture some local walking distance feautures...\n \n"
         "Is a nearby beach within walking distance important to you?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_two == 'Y':
+        "Please answer this with 'Y' for yes or 'N' for no: ")
+        if user_selection_two.lower() == 'y':
             clear_terminal()
             carribean += 1
             print("Who doesn't love a beach? Good choice! On to the next question...")
             break
-        elif user_selection_two == 'N':
+        elif user_selection_two.lower() == 'n':
             clear_terminal()
             usa_mexico += 1
             print("More of get up and explore kind of person, I like it! On to the next question...")
@@ -91,15 +85,15 @@ def user_questions():
     while True:
         user_selection_three = input("Now take a few seconds to think of the amazing meals you'll experience there...\n \n"
         "Is it important to you to indulge in local, traditional dishes of the culture?\n \n"
-        "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_three == 'Y':
+        "Please answer this with 'Y' for yes or 'N' for no: ")
+        if user_selection_three.lower() == 'y':
             clear_terminal()
             carribean += 1
             usa_mexico += 1
             print("Open to trying new things, an amazing way to get the locals experience, amazing choice!"
             "And for the next preference...")
             break
-        elif user_selection_three == 'N':
+        elif user_selection_three.lower() == 'n':
             clear_terminal()
             canada += 1
             print("Trying new things is risky, why not stick with what you know?! Let's move on...")
@@ -115,12 +109,12 @@ def user_questions():
         "but if not that's fine, we're not quite finished yet!\n \n"
         "Would you say that you are an adventurous individual that loves to explore?\n \n"
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_four == 'Y':
+        if user_selection_four.lower() == 'y':
             clear_terminal()
             canada += 1
             print("What better way to see the most of the destination! Just a few more questions...")
             break
-        elif user_selection_four == 'N':
+        elif user_selection_four.lower() == 'n':
             clear_terminal()
             carribean += 1
             print("Holidays are for relaxing right? Relaxing is just the way to do it. Just a few more questions...")
@@ -135,12 +129,12 @@ def user_questions():
         "wallet will burn if not careful..\n \n"
         "Do you wish to go somewhere on the cheaper range of the currency exchange rate?\n \n"
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_five == 'Y':
+        if user_selection_five.lower() == 'y':
             clear_terminal()
             canada += 1
             print("The cheaper the holiday the higher the class we fly, right?! And for the final question...")
             break
-        elif user_selection_five == 'N':
+        elif user_selection_five.lower() == 'n':
             clear_terminal()
             usa_mexico += 1
             print("Holidays aren't often enough, why not splash out?! And for the final question...")
@@ -155,12 +149,12 @@ def user_questions():
         "comes to children when on holday.\n \n"
         "Would you like your destination to be a childrens destination aswell as an adults?\n \n"
         "Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
-        if user_selection_six == 'Y':
+        if user_selection_six.lower() == 'y':
             clear_terminal()
             usa_mexico += 1
             print("The more the merrier! Who doesn't love sharing unforgettable moments with our little ones?")
             break
-        elif user_selection_six == 'N':
+        elif user_selection_six.lower() == 'n':
             clear_terminal()
             carribean += 1
             print("Everyone needs a break sometimes! They can come next time.. right?")
@@ -195,24 +189,28 @@ def destination_conclusion(carribean, usa_mexico, canada):
     while True:
         if carribean > usa_mexico:
             print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
-            f"{carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
+            f" {carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
             "amazing food.. what's more could you want?")
             break
         elif carribean < usa_mexico:
             print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
-            f"{usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
+            f" {usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
             "time of year, a home away from home.. right?")
             break
         elif carribean > canada:
             print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
-            f"{carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
-            "amazing food.. what's more could you want?")
+            f" {carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
+            " amazing food.. what's more could you want?")
             break
         elif carribean < canada:
-            print("Canada for you!")
+            print("Based on your preferences, a Canadian getaway would be the perfect choice for you!"
+            f" {canada_selection} is where you can only dream of. Why not try it out?"
+            "Adventures around every corner, great atmospheres and so much to explore!")
             break
         elif canada > usa_mexico:
-            print("Canada for you!")
+            print("Based on your preferences, a Canadian getaway would be the perfect choice for you!"
+            f"{canada_selection} is where you can only dream of. Why not try it out?"
+            "Adventures around every corner, great atmospheres and so much to explore!")
             break
         elif canada < usa_mexico:
             print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
@@ -220,13 +218,20 @@ def destination_conclusion(carribean, usa_mexico, canada):
             "time of year, a home away from home.. right?")
             break
         elif carribean == usa_mexico:
-            print("Carribean or USA/Mexico for you!")
+            print("Based on your preferences, a Carribean, USA or Mexican getaway would be perfect for you!"
+            f"if you are swaying towards a USA or Mexican holiday, why not consider {usa_mexico_selection}?"
+            f"if you are doting more towards a Carribean escape, {carribean_selection} would be the best time!"
+            "both are amazing but it comes down to one question. To beach or not to beach?")
             break
         elif carribean == canada:
-            print("Carribean or Canada for you!")
+            print("Based on your preferences, a Carribean or Canadian getaway would be perfect for you!"
+            f"If you fancy the Carribean, why not give {carribean_selection} a try?"
+            f"If you'd like to get more of an explore in, then {canada_selection} is your best friend!")
             break
         elif usa_mexico == canada:
-            print("USA/Mexico or Canada for you!")
+            print("Based on your preferences, a USA, Mexican or Canadian getaway is for you!"
+            f"{usa_mexico_selection} is a lovely destination to consider."
+            f"But {canada_selection} is also an amazing option, Which will it be?")
             break
     request_start_again()
 
@@ -235,12 +240,12 @@ def request_start_again():
     Function to ask the user whether they would like to try and questions again for a different output
     """
 
-    user_restart = input("Would you like to generate a new destination and start the questions over? Please answer Y/N: \n")
+    user_restart = input("\n \nWould you like to generate a new destination and start the questions over? Please answer Y/N: \n")
 
     while True:
-        if user_restart == "Y":
+        if user_restart.lower() == "y":
             main()
-        elif user_restart == "N":
+        elif user_restart.lower() == "n":
             clear_terminal()
             print("Perfect destination, right?! Thankyou for using this travel destination generator.")
         else:
