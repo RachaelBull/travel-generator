@@ -292,19 +292,22 @@ def destination_conclusion(carribean, usa_mexico, canada):
 
 def request_start_again():
     """
-    Function to ask the user whether they would like to try and questions again for a different output
+    Function to ask the user whether they would like to try and questions
+    again for a different output
     """
 
-    user_restart = input("\n \nWould you like to generate a new destination and start the questions over? Please answer Y/N: \n")
+    user_restart = input("\n \nWould you like to generate a new destination "
+                         "and start the questions over? Please answer Y/N: \n")
 
     while True:
         if user_restart.lower() == "y":
             main()
         elif user_restart.lower() == "n":
             clear_terminal()
-            print("Perfect destination, right?! Thankyou for using this travel destination generator.")
+            print("Perfect destination, right? Thankyou for using this travel "
+                  "destination generator.")
         else:
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+            print("Please answer this with Y/N: ")
 
 
 def main():
