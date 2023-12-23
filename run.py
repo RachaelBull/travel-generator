@@ -38,7 +38,6 @@ def introduction_message():
             break
 
 
-
 def user_questions():
     """
     Displays the questions and answer options to the user
@@ -197,7 +196,7 @@ def user_questions():
     while True:
         destination_conclusion(carribean, usa_mexico, canada)
         break
-    
+
 
 def destination_conclusion(carribean, usa_mexico, canada):
     """
@@ -311,11 +310,13 @@ def request_start_again():
 
 
 def main():
+
     """
     Function to call other functions in order
     """
 
     introduction_message()
     user_questions()
+
 
 main()
