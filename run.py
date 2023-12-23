@@ -188,7 +188,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
 
     carribean_selection = random.choice(carribean_destinations)
     usa_mexico_selection = random.choice(usa_mexico_destinations)
-    
+    canada_selection = random.choice(canada_destinations)
 
 
     clear_terminal()
