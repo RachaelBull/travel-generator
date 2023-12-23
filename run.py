@@ -216,56 +216,79 @@ def destination_conclusion(carribean, usa_mexico, canada):
     usa_mexico_selection = random.choice(usa_mexico_destinations)
     canada_selection = random.choice(canada_destinations)
 
-
     clear_terminal()
     while True:
         if carribean > usa_mexico:
-            print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
-            f" {carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
-            "amazing food.. what's more could you want?")
+            print("Based on your preferences, a Carribean getaway would be "
+                  "perfect for what you are looking for."
+                  f" {carribean_selection} would be a great place for you to "
+                  "try out. Pristine waters, bright sandy beaches,"
+                  " amazing food.. what's more could you want?")
             break
         elif carribean < usa_mexico:
-            print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
-            f" {usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
-            "time of year, a home away from home.. right?")
+            print("Based on your preferences, a USA or Mexican getaway would "
+                  "be the perfect choice for you!"
+                  f" {usa_mexico_selection} is a great destination to "
+                  "consider. Great traditional cuisine, great weather at the "
+                  "right time of year, a home away from home.. right?")
             break
         elif carribean > canada:
-            print("Based on your preferences, a Carribean getaway would be perfect for what you are looking for."
-            f" {carribean_selection} would be a great place for you to try out. Pristine waters, bright sandy beaches,"
-            " amazing food.. what's more could you want?")
+            print("Based on your preferences, a Carribean getaway would be "
+                  "perfect for what you are looking for."
+                  f" {carribean_selection} would be a great place for you to "
+                  "try out. Pristine waters, bright sandy beaches,"
+                  " amazing food.. what's more could you want?")
             break
         elif carribean < canada:
-            print("Based on your preferences, a Canadian getaway would be the perfect choice for you!"
-            f" {canada_selection} is where you can only dream of. Why not try it out?"
-            "Adventures around every corner, great atmospheres and so much to explore!")
+            print("Based on your preferences, a Canadian getaway would be the "
+                  "perfect choice for you!"
+                  f" {canada_selection} is where you can only dream of. "
+                  "Why not try it out?"
+                  "Adventures around every corner, great atmospheres and so "
+                  "much to explore!")
             break
         elif canada > usa_mexico:
-            print("Based on your preferences, a Canadian getaway would be the perfect choice for you!"
-            f"{canada_selection} is where you can only dream of. Why not try it out?"
-            "Adventures around every corner, great atmospheres and so much to explore!")
+            print("Based on your preferences, a Canadian getaway would be the "
+                  "perfect choice for you!"
+                  f"{canada_selection} is where you can only dream of. Why "
+                  "not try it out?"
+                  "Adventures around every corner, great atmospheres and so "
+                  "much to explore!")
             break
         elif canada < usa_mexico:
-            print("Based on your preferences, a USA or Mexican getaway would be the perfect choice for you!"
-            f"{usa_mexico_selection} is a great destination to consider. Great traditional cuisine, great weather at the right"
-            "time of year, a home away from home.. right?")
+            print("Based on your preferences, a USA or Mexican getaway would "
+                  "be the perfect choice for you!"
+                  f"{usa_mexico_selection} is a great destination to consider."
+                  " Great traditional cuisine, great weather at the right"
+                  "time of year, a home away from home.. right?")
             break
         elif carribean == usa_mexico:
-            print("Based on your preferences, a Carribean, USA or Mexican getaway would be perfect for you!"
-            f"if you are swaying towards a USA or Mexican holiday, why not consider {usa_mexico_selection}?"
-            f"if you are doting more towards a Carribean escape, {carribean_selection} would be the best time!"
-            "both are amazing but it comes down to one question. To beach or not to beach?")
+            print("Based on your preferences, a Carribean, USA or Mexican "
+                  "getaway would be perfect for you!"
+                  f"if you are swaying towards a USA or Mexican holiday, why "
+                  "not consider {usa_mexico_selection}?"
+                  "if you are doting more towards a Carribean escape, "
+                  f"{carribean_selection} would be the best time!"
+                  "both are amazing but it comes down to one question. "
+                  "To beach or not to beach?")
             break
         elif carribean == canada:
-            print("Based on your preferences, a Carribean or Canadian getaway would be perfect for you!"
-            f"If you fancy the Carribean, why not give {carribean_selection} a try?"
-            f"If you'd like to get more of an explore in, then {canada_selection} is your best friend!")
+            print("Based on your preferences, a Carribean or Canadian getaway "
+                  "would be perfect for you!"
+                  "If you fancy the Carribean, why not give "
+                  f"{carribean_selection} a try?"
+                  "If you'd like to get more of an explore in, then "
+                  f"{canada_selection} is your best friend!")
             break
         elif usa_mexico == canada:
-            print("Based on your preferences, a USA, Mexican or Canadian getaway is for you!"
-            f"{usa_mexico_selection} is a lovely destination to consider."
-            f"But {canada_selection} is also an amazing option, Which will it be?")
+            print("Based on your preferences, a USA, Mexican or Canadian "
+                  "getaway is for you!"
+                  f"{usa_mexico_selection} is a destination to love."
+                  f"But {canada_selection} is also an amazing option, "
+                  "Which will it be?")
             break
     request_start_again()
+
 
 def request_start_again():
     """
