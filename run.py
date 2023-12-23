@@ -210,7 +210,7 @@ def request_start_again():
     """
     Function to ask the user whether they would like to try and questions again for a different output
     """
-    print("hello")
+    print("Hello")
 
 def main():
     """
