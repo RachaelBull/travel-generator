@@ -165,9 +165,13 @@ def user_questions():
             break
         else:
             clear_terminal()
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")   
 
-        while True:
+def destination_conclusion(carribean, usa_mexico, canada):
+    """
+    Function to determine which destination would be best for the user
+    """
+    while True:
         if carribean > usa_mexico:
             print("Carribean for you!")
             break
@@ -195,14 +199,6 @@ def user_questions():
         elif usa_mexico == canada:
             print("USA/Mexico or Canada for you!")
             break
-    
-
-def destination_conclusion(carribean, usa_mexico, canada):
-    """
-    Function to determine which destination would be best for the user
-    """
-
-    
 
 def main():
     """
