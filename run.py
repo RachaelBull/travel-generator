@@ -210,7 +210,17 @@ def request_start_again():
     """
     Function to ask the user whether they would like to try and questions again for a different output
     """
-    print("Hello")
+
+    user_restart = input("Would you like to generate a new destination and start the questions over? Please answer Y/N: \n")
+
+    while True:
+        if user_restart == "Y":
+            main()
+        elif user_restart == "N":
+            print("Perfect destination, right?! Thankyou for using this travel destination generator.")
+        else:
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")
+
 
 def main():
     """
