@@ -1,6 +1,7 @@
 # Essential Imports
 import time
 import os
+import random
 
 def clear_terminal():
     """
@@ -166,20 +167,29 @@ def user_questions():
             break
         else:
             clear_terminal()
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ") 
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")  
 
     while True:
         destination_conclusion(carribean, usa_mexico, canada)
-        break  
+        break
 
 def destination_conclusion(carribean, usa_mexico, canada):
     """
     Function to determine which destination would be best for the user
     """
+
+    # Destinations Lists
+
+    carribean_destinations = ['St.Lucia', 'Barbados', 'Antigua', 'The Bahamas']
+    usa_mexico_destinations = ['Las Vegas', 'Cancun', 'New York', 'Chicago']
+    canada_destinations = ['Vancouver', 'Calgary']
+
+    carribean_selection = random.choice(carribean_destinations)
+
     clear_terminal()
     while True:
         if carribean > usa_mexico:
-            print("Carribean for you!")
+            print(f"Carribean for you! I personally recommend {carribean_selection}")
             break
         elif carribean < usa_mexico:
             print("USA/Mexico for you!")
