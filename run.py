@@ -165,7 +165,11 @@ def user_questions():
             break
         else:
             clear_terminal()
-            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ")   
+            print("Please answer this with 'Y' for yes or 'N' for no, be sure to use capitals for this: ") 
+
+    while True:
+        destination_conclusion(carribean, usa_mexico, canada)
+        break  
 
 def destination_conclusion(carribean, usa_mexico, canada):
     """
