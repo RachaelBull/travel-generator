@@ -1,32 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Travel Destination Generator
 
-Welcome,
+[Please visit the app here.](*link to be inserted*)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+INSERT AN IMAGE HERE SHOWING THE GAME
 
-## Reminders
+This app was created to provide assistance to people looking for a new holiday destination or region. This app presents a series of questions to the user to that are 
+quite general. The answers to these questions then tally up behind the scenes to general a conclusion once the series of questions come to an end, where the user will then be presented with a generated conclusion that would best fit their preferences.
+My current full time job is a Flight Attendent for a long haul airline. The destinations that I have designed the questions around are the places that I travel to very frequently and know quite well. Personally, they are also my favourite destinations that I travel to and would love to share and recommend the experiences that I have here with other. However, although a little similar they do differ from eachother and dependant on whatever the user intends to do on their desired getaway.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Introduction ##
 
-## Creating the Heroku app
+In this project you will find the following:
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+1. An introduction message containing guidence to the application with a name input
+2. A series of preference question with a yes or no answer option
+3. A destination conclusion containing suggestions
+4. An option to restart the questions if desired
 
-1. `heroku/python`
-2. `heroku/nodejs`
+**App owner goals**
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* Create an engaging application that users would be inclined to come back to
+* Allow the user to make their own choices
+* Store and record user data and answer selections
+* Make the app easy to use for users
+* Create a clear understanding on the input required to users
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+**User Goals**
 
-Connect your GitHub repository and deploy as normal.
+* As a first time user - I want to be able to start the application over if I wanted to
+* As a first time user - I want to be given questions related to the application
+* As a first time user - I want my destination generation to refect upon the preferences I have selected
+* As a first time user - I want clear guidence on the type of input I am allowed to enter
+* As a first time user - I want the application to be fast, easy and efficient to use
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## UX/UI
 
----
+### **Strategy Plane** ###
 
-Happy coding!
+One of the very first things I considered during the planning of this project website was who the audience would be and what they would expect/want.
