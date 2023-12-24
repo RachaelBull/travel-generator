@@ -187,6 +187,7 @@ def user_questions():
         if user_selection_six.lower() == 'y':
             clear_terminal()
             usa_mexico += 1
+            canada += 1
             print("The more the merrier! Who doesn't love sharing amazing "
                   "moments with our little ones?")
             break
@@ -230,7 +231,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
                   "perfect for what you are looking for."
                   f" {carribean_selection} would be a great place for you to "
                   "try out. Pristine waters, bright sandy beaches,"
-                  " amazing food.. what's more could you want?")
+                  " amazing food.. what more could you want?")
             break
         elif carribean < usa_mexico:
             print("Based on your preferences, a USA or Mexican getaway would "
@@ -244,7 +245,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
                   "perfect for what you are looking for."
                   f" {carribean_selection} would be a great place for you to "
                   "try out. Pristine waters, bright sandy beaches,"
-                  " amazing food.. what's more could you want?")
+                  " amazing food.. what more could you want?")
             break
         elif carribean < canada:
             print("Based on your preferences, a Canadian getaway would be the "
