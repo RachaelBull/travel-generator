@@ -27,9 +27,9 @@ def introduction_message():
           " preferences which you will answer yes or no -"
           " Y for yes and N for no.\n")
     print("After all questions have been answered you will then be displayed "
-          "with a destination recommendation tailored to your preferences.\n")
+          "with a\n destination recommendation tailored to your preferences.\n")
     print("The option to reset the travel generator will be presented at the "
-          "end of the series of questions. Enjoy!")
+          "end of the \nseries of questions. Enjoy!")
 
     # Username validation to only allow letters and no empty entries.
     while True:
@@ -73,7 +73,7 @@ def user_questions():
             clear_terminal()
             canada += 1  # Increment destination tally
             print("Not a problem, that preference isn't for everyone! "
-                  "Now for the next preference... \n \n")
+                  "Now for the next preference..\n \n")
             break
         else:
             clear_terminal()
@@ -138,7 +138,7 @@ def user_questions():
     while True:
         user_selection_four = input("Your days should have started to mould "
                                     "inside your imagination by now, "
-                                    "if not,   we're not finished yet!\n\n"
+                                    "if not,  we're not finished yet!\n\n"
                                     "Would you say that you are an adventurous"
                                     " individual that loves to explore?\n \n"
                                     "Please answer this with Y/N:\n")
@@ -152,7 +152,7 @@ def user_questions():
             clear_terminal()
             carribean += 1
             print("Holidays are for relaxing right? Relaxing is just the way "
-                  "to do it. Just a few more questions...\n\n")
+                  "to do it. Just a few\nmore questions...\n\n")
             break
         else:
             clear_terminal()
@@ -162,7 +162,7 @@ def user_questions():
     # Question No.5
     while True:
         user_selection_five = input("We're almost reaching the end! Now we "
-                                    "need to think about the hole that wallet"
+                                    "need to think about the hole the wallet"
                                     " will burn if not careful..\n \n"
                                     "Do you wish to go somewhere on the "
                                     "cheaper range of the currency exchange "
@@ -172,7 +172,7 @@ def user_questions():
             clear_terminal()
             canada += 1
             print("The cheaper the holiday the higher the class we fly, right?"
-                  " And for the final question...\n\n")
+                  "And for the final\nquestion...\n\n")
             break
         elif user_selection_five.lower() == 'n':
             clear_terminal()
@@ -190,7 +190,7 @@ def user_questions():
         user_selection_six = input("The final question... It's no secret that "
                                    "everyone has varied opinions when it "
                                    "comes to children when on holday.\n \n"
-                                   "Would you like your destination to be a "
+                                   "Would you like your holiday to be a "
                                    "childrens destination aswell as an adults?"
                                    "\n \n"
                                    "Please answer this with Y/N:\n")
@@ -332,7 +332,7 @@ def request_start_again():
 
     while True:
         user_restart = input("\n \nWould you like to generate a new "
-                             "destination and start the questions over?"
+                             "destination and start the questions over?\n"
                              "Please answer Y/N:\n")
         if user_restart.lower() == "y":
             clear_terminal()
