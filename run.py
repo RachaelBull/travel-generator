@@ -138,7 +138,7 @@ def user_questions():
     while True:
         user_selection_four = input("Your days should have started to mould "
                                     "inside your imagination by now, "
-                                    "if not, we're not finished yet!\n\n"
+                                    "if not,   we're not finished yet!\n\n"
                                     "Would you say that you are an adventurous"
                                     " individual that loves to explore?\n \n"
                                     "Please answer this with Y/N:\n")
