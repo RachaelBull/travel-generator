@@ -33,7 +33,7 @@ def introduction_message():
 
     # Username validation to only allow letters and no empty entries.
     while True:
-        user_name = input("\nPlease enter your name here: \n")
+        user_name = input("\nPlease enter your name here:\n")
         if not (user_name).isalpha() or (user_name == ''):
             clear_terminal()
             print("Invalid name, please try again.. "
@@ -62,7 +62,7 @@ def user_questions():
     while True:
         user_choice_one = input("Picture your dream getaway for a moment..\n"
                                 "\nNow first thing, do you want to relax?\n"
-                                "\nPlease answer with Y/N: ")
+                                "\nPlease answer with Y/N:\n")
         if user_choice_one.lower() == 'y':
             clear_terminal()
             carribean += 1  # Increment destination tally
@@ -86,7 +86,7 @@ def user_questions():
         user_selection_two = input("Now picture some local feautures...\n \n"
                                    "Is a nearby beach within walking distance "
                                    "important to you?\n \n"
-                                   "Please answer this with Y/N: ")
+                                   "Please answer this with Y/N:\n")
         if user_selection_two.lower() == 'y':
             clear_terminal()
             carribean += 1
@@ -113,7 +113,7 @@ def user_questions():
                                      "Is it important to you to indulge in "
                                      "local, traditional and cultural dishes?"
                                      "\n \n"
-                                     "Please answer this with Y/N: ")
+                                     "Please answer this with Y/N:\n")
         if user_selection_three.lower() == 'y':
             clear_terminal()
             carribean += 1
@@ -141,7 +141,7 @@ def user_questions():
                                     "if not, we're not finished yet!\n\n"
                                     "Would you say that you are an adventurous"
                                     " individual that loves to explore?\n \n"
-                                    "Please answer this with Y/N: ")
+                                    "Please answer this with Y/N:\n")
         if user_selection_four.lower() == 'y':
             clear_terminal()
             canada += 1
@@ -167,7 +167,7 @@ def user_questions():
                                     "Do you wish to go somewhere on the "
                                     "cheaper range of the currency exchange "
                                     "rate?\n \n"
-                                    "Please answer this with Y/N: ")
+                                    "Please answer this with Y/N:\n")
         if user_selection_five.lower() == 'y':
             clear_terminal()
             canada += 1
@@ -193,7 +193,7 @@ def user_questions():
                                    "Would you like your destination to be a "
                                    "childrens destination aswell as an adults?"
                                    "\n \n"
-                                   "Please answer this with Y/N: ")
+                                   "Please answer this with Y/N:\n")
         if user_selection_six.lower() == 'y':
             clear_terminal()
             usa_mexico += 1
@@ -333,7 +333,7 @@ def request_start_again():
     while True:
         user_restart = input("\n \nWould you like to generate a new "
                              "destination and start the questions over?"
-                             "Please answer Y/N: \n")
+                             "Please answer Y/N:\n")
         if user_restart.lower() == "y":
             clear_terminal()
             main()
@@ -345,7 +345,7 @@ def request_start_again():
             break
         else:
             clear_terminal()
-            print("Please answer this with Y/N: ")
+            print("Please answer this with Y/N:\n")
 
 
 def main():
