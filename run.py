@@ -1,12 +1,13 @@
 # Essential Imports
-import time
-import os
-import random
+import os  # To interact with the underlying operating system
+import random  # To grab a random destination out of the lists
 
 
 def clear_terminal():
     """
-    Function to clear the terminal after some inputs
+    Function to clear the terminal after the user
+    answers a question or unputs some data.
+    Prevents the terminal from looking too crowded.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -14,7 +15,9 @@ def clear_terminal():
 def introduction_message():
     """
     Displays an introduction message to the user to indicate what this
-    application is for
+    application is for.
+    Provides the user with rules on how to enter input and what the
+    application will accept as valid input.
     """
     clear_terminal()
     print("Welcome to this destination suggestions application.\n")
@@ -26,10 +29,11 @@ def introduction_message():
     print("The option to reset the travel generator will be presented at the "
           "end of the series of questions. Enjoy!")
 
-    # Username validation to only allow letters
+    # Username validation to only allow letters and no empty entries.
     while True:
         user_name = input("\nPlease enter your name here: \n")
         if not (user_name).isalpha() or (user_name == ''):
+            clear_terminal()
             print("Invalid name, please try again.. "
                   "using only letter characters.")
         else:
@@ -42,12 +46,15 @@ def introduction_message():
 
 def user_questions():
     """
-    Displays the questions and answer options to the user
+    Displays the questions and answer options to the user.
+    A brief response is given back to the user to confirm
+    that the users response has been succesfully recorded.
     """
     # To keep a tally of destinations depending on the users selected answer
     carribean = 0
     usa_mexico = 0
     canada = 0
+
     # Question No,1
 
     while True:
@@ -111,7 +118,7 @@ def user_questions():
             usa_mexico += 1
             print("Open to trying new things, an amazing way to get the "
                   "locals experience, amazing choice!"
-                  "And for the next preference...\n\n")
+                  " And for the next preference...\n\n")
             break
         elif user_selection_three.lower() == 'n':
             clear_terminal()
@@ -163,7 +170,7 @@ def user_questions():
             clear_terminal()
             canada += 1
             print("The cheaper the holiday the higher the class we fly, right?"
-                  "And for the final question...\n\n")
+                  " And for the final question...\n\n")
             break
         elif user_selection_five.lower() == 'n':
             clear_terminal()
@@ -176,6 +183,7 @@ def user_questions():
             print("Invalid input, please try again.\n"
                   "Using Y for yes and N for no.\n\n")
     # Question No.6
+
     while True:
         user_selection_six = input("The final question... It's no secret that "
                                    "everyone has varied opinions when it "
@@ -210,6 +218,10 @@ def user_questions():
 def destination_conclusion(carribean, usa_mexico, canada):
     """
     Function to determine which destination would be best for the user
+    based on what they have answered to the questions.
+    The tally gets recorded throughout each answer that is selected
+    and a random region of that specific country is then pulled from
+    the destinations list using the random() method.
     """
 
     # Destinations Lists
@@ -228,72 +240,81 @@ def destination_conclusion(carribean, usa_mexico, canada):
     while True:
         if carribean > usa_mexico:
             print("Based on your preferences, a Carribean getaway would be "
-                  "perfect for what you are looking for."
-                  f" {carribean_selection} would be a great place for you to "
-                  "try out. Pristine waters, bright sandy beaches,"
+                  "perfect for what you are looking for.")
+            print(f"{carribean_selection} would be a great place for you to "
+                  "try out.")
+            print("Pristine waters, bright sandy beaches,"
                   " amazing food.. what more could you want?")
             break
         elif carribean < usa_mexico:
             print("Based on your preferences, a USA or Mexican getaway would "
-                  "be the perfect choice for you!"
-                  f" {usa_mexico_selection} is a great destination to "
-                  "consider. Great traditional cuisine, great weather at the "
+                  "be the perfect choice for you!")
+            print(f"{usa_mexico_selection} is a great destination to"
+                  " consider.")
+            print("Great traditional cuisine, great weather at the "
                   "right time of year, a home away from home.. right?")
             break
         elif carribean > canada:
             print("Based on your preferences, a Carribean getaway would be "
-                  "perfect for what you are looking for."
-                  f" {carribean_selection} would be a great place for you to "
-                  "try out. Pristine waters, bright sandy beaches,"
+                  "perfect for what you are looking for.")
+            print(f"{carribean_selection} would be a great place for you to "
+                  "try out.")
+            print("Pristine waters, bright sandy beaches,"
                   " amazing food.. what more could you want?")
             break
         elif carribean < canada:
             print("Based on your preferences, a Canadian getaway would be the "
-                  "perfect choice for you!"
-                  f" {canada_selection} is where you can only dream of. "
-                  "Why not try it out?\n"
+                  "perfect choice for you!")
+            print(f"{canada_selection} is where you can only dream of.")
+            print("Why not try it out?\n"
                   "Adventures around every corner, great atmospheres and so "
                   "much to explore!")
             break
         elif canada > usa_mexico:
             print("Based on your preferences, a Canadian getaway would be the "
-                  "perfect choice for you!"
-                  f"{canada_selection} is where you can only dream of. Why "
-                  "not try it out?\n"
+                  "perfect choice for you!")
+            print(f"{canada_selection} is where you can only dream of.")
+            print("Why not try it out?\n"
                   "Adventures around every corner, great atmospheres and so "
                   "much to explore!")
             break
         elif canada < usa_mexico:
             print("Based on your preferences, a USA or Mexican getaway would "
-                  "be the perfect choice for you!"
-                  f"{usa_mexico_selection} is a great destination to consider."
-                  " Great traditional cuisine, great weather at the right"
-                  "time of year, a home away from home.. right?")
+                  "be the perfect choice for you!")
+            print(f"{usa_mexico_selection} is a great destination to"
+                  " consider.")
+            print("Great traditional cuisine, great weather at the "
+                  "right time of year, a home away from home.. right?")
             break
         elif carribean == usa_mexico:
             print("Based on your preferences, a Carribean, USA or Mexican "
-                  "getaway would be perfect for you!"
-                  f"if you are swaying towards a USA or Mexican holiday, why "
-                  f"not consider {usa_mexico_selection}?"
-                  "if you are doting more towards a Carribean escape, "
-                  f"{carribean_selection} would be the best time!"
-                  "both are amazing but it comes down to one question. "
+                  "getaway would be perfect for you!")
+            print("If you are swaying towards a USA or Mexican holiday .."
+                  f" then defintely consider {usa_mexico_selection}.")
+            print("And if you are doting more towards a Carribean escape..")
+            print(f"{carribean_selection} would be the best time!")
+            print("Both are amazing but it comes down to one question... "
                   "To beach or not to beach?")
             break
         elif carribean == canada:
-            print("Based on your preferences, a Carribean or Canadian getaway "
-                  "would be perfect for you!"
-                  "If you fancy the Carribean, why not give "
-                  f"{carribean_selection} a try?"
-                  "If you'd like to get more of an explore in, then "
-                  f"{canada_selection} is your best friend!")
+            print("Based on your preferences, a Carribean or Canadian "
+                  "getaway would be perfect for you!")
+            print("If you are swaying towards a Canadian holiday .."
+                  f" then defintely consider {canada_selection}.")
+            print("And if you are doting more towards a Carribean escape..")
+            print(f"{carribean_selection} would be the best time!")
+            print("Both are amazing but it comes down to one question... "
+                  "To beach or not to beach?")
             break
         elif usa_mexico == canada:
-            print("Based on your preferences, a USA, Mexican or Canadian "
-                  "getaway is for you!"
-                  f"{usa_mexico_selection} is a destination to love."
-                  f"But {canada_selection} is also an amazing option, "
-                  "Which will it be?")
+            print("Based on your preferences, a Canadian, USA or Mexican "
+                  "getaway would be perfect for you!")
+            print("If you are swaying towards a USA or Mexican holiday .."
+                  f" then defintely consider {usa_mexico_selection}.")
+            print("And if you are doting more towards a Canadian escape..")
+            print(f"{canada_selection} would be the best time!")
+            print("Both are amazing but it comes down to one question... "
+                  "To explore or not to explore?")
             break
     while True:
         request_start_again()
@@ -302,20 +323,22 @@ def destination_conclusion(carribean, usa_mexico, canada):
 
 def request_start_again():
     """
-    Function to ask the user whether they would like to try and questions
-    again for a different output
+    Function to ask the user whether they would like to try the questions
+    again for a different destination or if they are happy with the
+    generation that was given.
     """
 
     while True:
-        user_restart = input("\n \nWould you like to generate a new destination "
-                         "and start the questions over? Please answer Y/N: \n")
+        user_restart = input("\n \nWould you like to generate a new "
+                             "destination and start the questions over?"
+                             "Please answer Y/N: \n")
         if user_restart.lower() == "y":
             clear_terminal()
             main()
             break
         elif user_restart.lower() == "n":
             clear_terminal()
-            print("Perfect destination, right? Thankyou for using this travel "
+            print("Perfect pick, right? Thankyou for using this travel "
                   "destination generator.")
             break
         else:
@@ -323,14 +346,14 @@ def request_start_again():
             print("Please answer this with Y/N: ")
 
 
-
 def main():
 
     """
-    Function to call other functions in order
+    Function to call all main functions in order to try and
+    keep the code tidy and readable.
     """
 
-    #introduction_message()
+    introduction_message()
     user_questions()
 
 
