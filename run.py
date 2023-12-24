@@ -19,22 +19,24 @@ def introduction_message():
     clear_terminal()
     print("Welcome to this destination suggestions application.\n")
     print("You will be asked multiple general questions about your destination"
-          " preferences which you will answer yes or no.\n")
+          " preferences which you will answer yes or no -"
+          " Y for yes and N for no.\n")
     print("After all questions have been answered you will then be displayed "
           "with a destination recommendation tailored to your preferences.\n")
-    print("An optional prices average for the month of travel can also be "
-          "displayed after this conclusion.")
+    print("The option to reset the travel generator will be presented at the "
+          "end of the series of questions. Enjoy!")
 
     # Username validation to only allow letters
     while True:
         user_name = input("\nPlease enter your name here: \n")
         if not (user_name).isalpha() or (user_name == ''):
-            print('Invalid name, please try again.\n')
+            print("Invalid name, please try again.. "
+                  "using only letter characters.")
         else:
             clear_terminal()
             print(f"Hello {user_name}, please take time to think about your "
                   "preferences to the questions,")
-            print(" as your destination generation will depend on this.\n \n")
+            print("as your destination generation will depend on this.\n \n")
             break
 
 
@@ -50,7 +52,7 @@ def user_questions():
 
     while True:
         user_choice_one = input("Picture your dream getaway for a moment..\n"
-                                "Now first thing, do you want to relax?\n \n"
+                                "\nNow first thing, do you want to relax?\n"
                                 "Please answer with Y/N: ")
         if user_choice_one.lower() == 'y':
             clear_terminal()
@@ -242,7 +244,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
             print("Based on your preferences, a Canadian getaway would be the "
                   "perfect choice for you!"
                   f" {canada_selection} is where you can only dream of. "
-                  "Why not try it out?"
+                  "Why not try it out?\n"
                   "Adventures around every corner, great atmospheres and so "
                   "much to explore!")
             break
@@ -250,7 +252,7 @@ def destination_conclusion(carribean, usa_mexico, canada):
             print("Based on your preferences, a Canadian getaway would be the "
                   "perfect choice for you!"
                   f"{canada_selection} is where you can only dream of. Why "
-                  "not try it out?"
+                  "not try it out?\n"
                   "Adventures around every corner, great atmospheres and so "
                   "much to explore!")
             break
