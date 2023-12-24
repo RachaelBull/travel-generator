@@ -8,6 +8,8 @@ def clear_terminal():
     Function to clear the terminal after the user
     answers a question or unputs some data.
     Prevents the terminal from looking too crowded.
+    Code for this is from stack overflow -
+    clearly credited in the README file.
     """
     os.system('cls' if os.name == 'nt' else 'clear')
 
