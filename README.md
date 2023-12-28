@@ -36,6 +36,32 @@ In this project you will find the following:
 
 ## UX/UI
 
-### **Strategy Plane** ###
+### **Strategy** ###
 
 One of the very first things I considered during the planning of this project website was who the audience would be and what they would expect/want.
+
+**What I expect the user would be looking for:**
+
+* Clear, concise instructions on how to use the application
+* Displayed with general, interesting and relevent content
+* The ability to submit input to the application
+* A relevent outcome to the input given
+* The option to easily try out and reset the application again
+
+**Target Users:**
+
+* 18 years plus
+* People looking for a new destination to travel to
+* People who look for multiple features when looking for a new destination to holiday
+* People interested in travel
+* People interested in learning a little more about other destinations
+
+### **Scope** ###
+
+The features added to ensure that the user gets the best and the most out of their experience are:
+
+* An introduction message when first running the programme, containing clear and concise instructions - this contains information about what the application is for and what the purpose of the application is for.
+* A user input feild where the user can enter their name - the terminal will then present a greeting message using the users inputted name to confirm that  the application has recieved the input from the user.
+* A series of questions relating to destinations which the user can answer either yes or no to.
+* A short conclusion is generated at the end of the questioning section where a broad destination is shown (depending on how the user answers detirmines the tally of destinations that are recorded and shown at the end). A random smaller destination within the generated country is pulled from a small list and a small overview is presented to the user.
+* An option to start over and try again is located underneither the conclusion, if the user selects yes then the application will start over - if the user selects no then the user will be presented with a little thankyou message for using this application.
