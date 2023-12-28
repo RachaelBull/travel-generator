@@ -202,3 +202,29 @@ One the questions have finished the values of each destination will be compared 
 *Tally Testing*
 
 * Using a pen and paper I have recorded the expected outcomes of certain answers and confirmed that all outcomes have a possiblily to show to the user based on their answer choices - making sure that no code is useless within my project.
+
+**Destination Random List Pull**
+
+To make things a little more detailed and personalised, I created 3 small lists containing different areas of the generated destination. So once a destination has been confirmed through the conclusion part of the application (the comparison code) then through a generated message a small part of the destination will be pulled out at random from the lists and places into the message. Here is an example of this:
+
+*Random List Example*
+![List Example](images/list-example.png)
+
+## Bugs Known & Fixed
+
+The first bug I had come across was when generating a destination to present the user with a little detailed conclusion. 
+
+**Here is the error message that was being returned to me when the bug existed**
+![Conclusion Bug Unfixed](images/conclusion-bug.png)
+
+Here the error, from what I could make of it, was telling me that it couldn't accept me trying to access some variable data contained in another function into this one if I passed them as peramiters and arguments. I was stuck on this for a little while, I did try to change my variables to global variables which did also create another bug all together as my variable was then being called and changed in too many places. 
+
+**Here is my fixed result to display the test destination message at the time of the initial development**
+![[Fixed Bug Outcome](images/conclusion-bug-fix-two.png)
+
+Here I was able to successfully display a test conclusion message at the time of the early stages of development. Here there are no errors and no loops occuring (which happened on a few occasions before finding the proper fix).
+
+**Here is how I fixed the bug within the code**
+![Fixed Bug Code](images/conclusion-bug-fix-two.png)
+
+I created a loop within another funtion to check if all was true, then the other function could run. This did however, prevent this actual function to be called directly into the main function where I would have liked it - but with more practice and knowledge I intent to work towards this. However, this fix is still very stable and efficient. This allowed the function to have access to certain information that I was trying to access through passing arguments.
