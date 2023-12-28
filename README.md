@@ -136,3 +136,24 @@ Import random was using during my project but not in huge amounts. I used this t
   This technology was used to validate my python code.
 * [Slack](https://slack.com/intl/en-ie/)
   This technology was used a lot in order to easily find solutions from other students and the educational content provided within the channels.
+
+  ## Testing
+
+**Code Institute Python Code Validator**
+![Errors List](images/validator-errors-list.png)
+
+When I first passed my code through the validator it was displaying multiple errors and warnings which I worked through and then got into the habbit of writing the rest of the code on how it would be passed through the validator.
+
+![Errors Resolved](images/passed-validator.png)
+
+After working through the code and learning how to write the rest of the code in the type of format that the validator would accept I resolved all errors and warnings.
+
+**User name input**
+
+When I created the feature in my project to allow the user to enter their name into the terminal I wanted the application to only allow letter characters and not numbers. The length of the name isn't something that I saw to be a problem which I did add at first and then later look out incase some users wished to have a longer name than the average. For this input my code only allows users to procceed with letters and not numbers or special characters which I will show below: 
+
+![Invalid Name](images/name-invalid.png)
+
+Once the user name input is accepted by the application the following message is shown as clear indication:
+![Valid Name](images/name-valid.png)
+
