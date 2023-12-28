@@ -1,4 +1,4 @@
-# Travel Destination Generator
+\# Travel Destination Generator
 
 [Please visit the app here.](*link to be inserted*)
 
@@ -66,6 +66,10 @@ The features added to ensure that the user gets the best and the most out of the
 * A short conclusion is generated at the end of the questioning section where a broad destination is shown (depending on how the user answers detirmines the tally of destinations that are recorded and shown at the end). A random smaller destination within the generated country is pulled from a small list and a small overview is presented to the user.
 * An option to start over and try again is located underneither the conclusion, if the user selects yes then the application will start over - if the user selects no then the user will be presented with a little thankyou message for using this application.
 
+### **Surface** ###
+
+As this application was made to be a text based project using the terminal, no decorative work needed to be done here. However, time has been taken to make sure that the text presents nicely into the terminal and new lines have been added where necessary and where pleasing to the eye.
+
 
 ## Features in more detail ##
 
@@ -105,3 +109,30 @@ If the user was t0 answer no to the application reset question then this is the 
 ![Yes to the reset question](images/yes-reset.png)
 
 If the user was to answer yes to the application reset question then the application will be reset completely and the user will be brought right back to the start again. This does ask the user to input their name again, this is incase there is more people present who would like to generate their own destination and want a more personalised approach.
+
+## Dependencies
+
+**Import OS**
+
+The import os module was used quite consistantly throughout my python based project. This allowed me to interact with the operating system which I needed to do when it came to clearing the terminal for a tidier looking terminal - opting for a better user experience overall.
+
+**Import Random**
+
+Import random was using during my project but not in huge amounts. I used this to be able to pull out a random smaller destination out of my lists to display to the user.
+
+## Technologies Used 
+
+* [Python](https://www.python.org/)
+  This technology was used to create the entire project.
+* [GitHub](https://github.com/)
+  This technology was used to securely store all of my code in a resporitory.
+* [Heroku](https://www.heroku.com/home?)
+  This technology was used to easily and efficently deploy my application project.
+* [Git](https://git-scm.com/)
+  This technology was used to make changes to my code aswell as manage version control.
+* [Codeanywhere](https://app.codeanywhere.com/)
+  This technology was used as my coding development environment.
+* [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+  This technology was used to validate my python code.
+* [Slack](https://slack.com/intl/en-ie/)
+  This technology was used a lot in order to easily find solutions from other students and the educational content provided within the channels.
