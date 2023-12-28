@@ -65,3 +65,18 @@ The features added to ensure that the user gets the best and the most out of the
 * A series of questions relating to destinations which the user can answer either yes or no to.
 * A short conclusion is generated at the end of the questioning section where a broad destination is shown (depending on how the user answers detirmines the tally of destinations that are recorded and shown at the end). A random smaller destination within the generated country is pulled from a small list and a small overview is presented to the user.
 * An option to start over and try again is located underneither the conclusion, if the user selects yes then the application will start over - if the user selects no then the user will be presented with a little thankyou message for using this application.
+
+
+## Features in more detail ##
+
+**Instructions Section**
+![Instructions Section](images/rules-feature.png)
+
+Upon launching the application the above content is displayed to the user. This contains basic and easy instructions on how to use the application and what the expected outputs and inputs will be. The instructions clearly state to the user the need to use only Y for yes and N for no when it comes to answering the questions. After the short instructions and introduction message the user is asked to input their name in the feild below.
+
+**Questions**
+![User aknowledgement and start of the questions](images/welcome-feature.png)
+
+Once the user has entered their name, inputting only letter characters, they are they given a little message using their name input that is displayed at the top of the terminal - this acts as a way to tell the user that the application is working and is recieving and recording their inputs properly. 
+
+The start of the questions is then presented underneith in quite an informal but still friendly mannor - the works as a way to create ease and comfort to the user. There is then a short line of instructions reminding the user that they must only answer in the following ways.
