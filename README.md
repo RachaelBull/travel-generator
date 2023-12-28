@@ -220,7 +220,7 @@ The first bug I had come across was when generating a destination to present the
 Here the error, from what I could make of it, was telling me that it couldn't accept me trying to access some variable data contained in another function into this one if I passed them as peramiters and arguments. I was stuck on this for a little while, I did try to change my variables to global variables which did also create another bug all together as my variable was then being called and changed in too many places. 
 
 **Here is my fixed result to display the test destination message at the time of the initial development**
-![[Fixed Bug Outcome](images/conclusion-bug-fix-two.png)
+![[Fixed Bug Outcome](images/conclusion-bug-fix-one.png)
 
 Here I was able to successfully display a test conclusion message at the time of the early stages of development. Here there are no errors and no loops occuring (which happened on a few occasions before finding the proper fix).
 
@@ -228,3 +228,46 @@ Here I was able to successfully display a test conclusion message at the time of
 ![Fixed Bug Code](images/conclusion-bug-fix-two.png)
 
 I created a loop within another funtion to check if all was true, then the other function could run. This did however, prevent this actual function to be called directly into the main function where I would have liked it - but with more practice and knowledge I intent to work towards this. However, this fix is still very stable and efficient. This allowed the function to have access to certain information that I was trying to access through passing arguments.
+
+## Deployment
+
+**Heroku Deployment**
+
+I deployed my project using Heroku. Please follow the steps carefully to do the same with ease.
+
+1. For my project I did not use API's such as google sheets etc. So I do not need any requirments in my text file before I deploy. However, if you are using any API's or anything external then please do the following: Type 'pip3 freeze > requirements.txt' into your terminal. This makes sure Heroku has up to date dependencies before you deploy your project.
+![Requirements Update](images/requirment-update.png)
+2. Sign into your Heroku account.
+![Heroki Sign In](images/heroku-signin.png)
+3. Once you have signed into your account, select create a new app. Name your app whatever you'd like and select your region. (You may need to have your payment option set up before you can do this).
+![Create App](images/create-app.png)
+![Create App Region](images/create-app-one.png)
+4. Then navigate to the settings tab and scroll down to Config Vars and then select reveal configs:
+![Config Vars](images/config-vars.png)
+5. If you have a creds.json file then paste the contents in the 'VALUE' field and 'CREDS' in the 'KEY' field.
+Also please note to now add 'PORT' in the 'KEY' field and '8000' in the 'VALUE field.
+![Keys](images/keys.png)
+6. How scroll to the buildpacks area. Here you will need to add Python and Node.js.
+![Buildpack Selection](images/buildpack-select.png)
+Please make sure that the Python buildpack comes before the Node.js pack - this can be done manually by dragging with your cursor.
+![Buildpack Complete](images/buildpack-complete.png)
+7. Navigate to the deploy section and select Github. Confirm that you want to connect your Github, then search for your repository code and click connect.
+![Deployment](images/deployment.png)
+Scroll to automatic deploys and select enable automatic deploys. This means Heroku will keep up to date with any changes you push on Github. Heroku will then begin building your app.
+
+**Forking with Github**
+
+*View or make changes to a repository without affecting the original*
+
+* On Github, navigate to the repository.
+* On the top right hand side of the page, click 'Fork'.
+* Beneath 'Owner', select the dropdown menu and click an owner for the forked repository.
+
+*Making a Clone*
+
+* On GitHub.com, navigate to the main page of the repository.
+* Above the list of files, click 'Code' and copy the link provided.
+* Open Git Bash.
+* Change the current working directory to the location where you want the cloned directory.
+* Type git clone, and then paste the URL you copied earlier.
+* Press 'Enter' to create your clone.
