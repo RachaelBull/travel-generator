@@ -170,3 +170,35 @@ If the user was to answer with accepted and appropriate input, then the followin
 ![Valid Questions Input](images/questions-valid.png)
 
 As shown above - a small acknowledgment message is shown to the user to let them know that their data has been successfully recorded. They are then presented with the next question.
+
+**User Restart Input**
+
+Since first planning and starting the project my intention for the user was always to have a restart option presented to them at the end of the question series. This makes it easier for the user to go back and rethink any questions they may have answered to try and get a new destination if they didn't quite agree with the one that had been generated for them. This again, is a y or Y for yes and a n or N for no. If anything else is inputted into this field by the user then an error message and an option to try again will be displayed to the user.
+
+*Here is what the question will look like before any input is given*
+![No Input Restart Question](images/restart-question.png)
+
+*Once incorrect input is given the application will present the user with the following message:*
+![Invalid Input Restart Question](images/invalid-restart.png)
+
+*And once the user has selected a valid input, 1 of 2 outcomes will be presented to the user:*
+![Restart Valid Outcome One](images/restart-valid-one.png)
+![Restart Valid Outcome Two](images/restart-valid-two.png)
+
+**Destination Answer Tally**
+
+Here I will take the time to explain how my tally system works within my code and how I have tested all possible outcomes.
+
+There are 3 destinations and categories that the questions are based around - USA/Mexico, Canada and Carribean. Everytime the user selects an answer, either yes or no, one or more destinations will increment their value by one, for example:
+
+*Tally Example*
+![Tally Example](images/tally-example.png)
+
+One the questions have finished the values of each destination will be compared with eachother to detirmine if any values are the same - to which a message will display recommending two destinations. Or if theres one value that is bigger than the others - to which a message will display recommending only one destination. For example:
+
+*Tally Comparison*
+![Tally Comparison](images/comparison-example.png)
+
+*Tally Testing*
+
+* Using a pen and paper I have recorded the expected outcomes of certain answers and confirmed that all outcomes have a possiblily to show to the user based on their answer choices - making sure that no code is useless within my project.
