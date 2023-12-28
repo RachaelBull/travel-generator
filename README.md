@@ -80,3 +80,28 @@ Upon launching the application the above content is displayed to the user. This 
 Once the user has entered their name, inputting only letter characters, they are they given a little message using their name input that is displayed at the top of the terminal - this acts as a way to tell the user that the application is working and is recieving and recording their inputs properly. 
 
 The start of the questions is then presented underneith in quite an informal but still friendly mannor - the works as a way to create ease and comfort to the user. There is then a short line of instructions reminding the user that they must only answer in the following ways.
+
+**User answering yes:**
+![User answering yes to a question](images/user-yes-feature.png)
+
+A short message is displayed to the user depending on which question was answered yes to. This acts as a way to reassure the user still that their input is being recieved and recorded correctly.
+
+**User answering no:**
+![User answering no to a question](images/user-no-feature.png)
+
+A short message is displayed to the user depending on which question was answered no to. This acts as a way to reassure the user still that their input is being recorded and recieved correctly.
+
+**Conclusion**
+![Generated conclusion](images/conclusion-feature.png)
+
+Once the series of questions have been answered appropriatly by the user, a short conclusion will be displayed to the user which would have been generated depending on if the answers related to the destination or not. This conclusion will include a small message recommeding one or more destinations. An option is then presented at the bottom of this conclusion asking the user if they would like to reset the travel generator application and start again.
+
+**No to restarting the application**
+![No to the reset question](images/no-reset.png)
+
+If the user was t0 answer no to the application reset question then this is the short and final message the user will be presented with. If the user then wanted to decide that they actually did want to reset the game then this can be achieved through pressing the run programme button with will restart the application up again.
+
+**Yes to restarting the application**
+![Yes to the reset question](images/yes-reset.png)
+
+If the user was to answer yes to the application reset question then the application will be reset completely and the user will be brought right back to the start again. This does ask the user to input their name again, this is incase there is more people present who would like to generate their own destination and want a more personalised approach.
