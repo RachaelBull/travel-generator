@@ -148,7 +148,7 @@ When I first passed my code through the validator it was displaying multiple err
 
 After working through the code and learning how to write the rest of the code in the type of format that the validator would accept I resolved all errors and warnings.
 
-**User name input**
+**User Name Input**
 
 When I created the feature in my project to allow the user to enter their name into the terminal I wanted the application to only allow letter characters and not numbers. The length of the name isn't something that I saw to be a problem which I did add at first and then later look out incase some users wished to have a longer name than the average. For this input my code only allows users to procceed with letters and not numbers or special characters which I will show below: 
 
@@ -157,3 +157,16 @@ When I created the feature in my project to allow the user to enter their name i
 Once the user name input is accepted by the application the following message is shown as clear indication:
 ![Valid Name](images/name-valid.png)
 
+**User Questions Input**
+
+When the questions feature was implimented into my project I intended to keep the accepted input to the questions easy and simple. The instuctions and appropriate ways to answer the questions are explained in the introduction section of the application just before the user is asked to enter their name. Reminders of how to answer are constantly being shown at every question throughout the project. The only accepted input for these questions are y or Y for yes and n or N for no. If the user was to input something that did not match the required, then the following error message would be displayed to the user:
+
+![Invalid Questions Input](images/questions-invalid.png)
+
+As shown above - a small error message is presented to the user with another reminder on how to answer the question. The question is then repeated for the user to try again. 
+
+If the user was to answer with accepted and appropriate input, then the following will be displayed to the user:
+
+![Valid Questions Input](images/questions-valid.png)
+
+As shown above - a small acknowledgment message is shown to the user to let them know that their data has been successfully recorded. They are then presented with the next question.
