@@ -151,6 +151,8 @@ Import random was used during my project but not in huge amounts. I used this to
 
 When I first passed my code through the validator it was displaying multiple errors and warnings which I worked through and then got into the habit of writing the rest of the code on how it would be passed through the validator.
 
+**Please note that when passing my repository run.py code through the validator it gives a new line error however github will not display an empty line with nothing underneith - my code space does have the new line space underneith the main() function called at the bottom of my file**
+
 ![Errors Resolved](images/passed-validator.png)
 
 After working through the code and learning how to write the rest of the code in the type of format that the validator would accept I resolved all errors and warnings.
