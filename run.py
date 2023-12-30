@@ -27,7 +27,7 @@ def introduction_message():
           " preferences which you will answer yes or no -"
           " Y for yes and N for no.\n")
     print("After all questions have been answered you will then be displayed "
-          "with a\n destination recommendation tailored to your preferences.\n")
+          "with a\n destination recommendation tailored to your preference.\n")
     print("The option to reset the travel generator will be presented at the "
           "end of the \nseries of questions. Enjoy!")
 
